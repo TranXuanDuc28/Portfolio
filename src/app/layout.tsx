@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Preloader } from "@/components/ui/Preloader";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,6 +47,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans bg-background text-foreground min-h-screen selection:bg-primary/30`}>
         <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem>
+          <Toaster richColors position="top-right" />
           <Preloader />
           {children}
           <script

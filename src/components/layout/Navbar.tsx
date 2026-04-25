@@ -34,9 +34,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "py-4" : "py-8"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? "py-4" : "py-8"
+        }`}
     >
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-50"
@@ -46,7 +45,8 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="relative group cursor-pointer"
+          className="text-2xl font-black tracking-tighter flex items-center gap-1 group"
+          suppressHydrationWarning
         >
           <div className="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition duration-500" />
           <span className="relative text-2xl font-black tracking-tighter text-foreground">
@@ -68,20 +68,21 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-           <ThemeToggle />
-           <a 
-            href="#contact" 
+          <ThemeToggle />
+          <a
+            href="#contact"
             className="px-6 py-2.5 bg-foreground text-background rounded-xl text-sm font-bold hover:bg-primary hover:text-white transition-all flex items-center gap-2"
-           >
-              Let&apos;s Talk <ArrowUpRight className="w-4 h-4" />
-           </a>
+          >
+            Contact Me <ArrowUpRight className="w-4 h-4" />
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden">
-          <button 
-            onClick={() => setIsOpen(!isOpen)} 
-            className="w-12 h-12 glass rounded-xl flex items-center justify-center transition-colors hover:bg-white/5"
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            suppressHydrationWarning
+            className="w-12 h-12 glass rounded-xl flex items-center justify-center transition-colors hover:bg-white/10"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -113,8 +114,8 @@ export default function Navbar() {
                   <ThemeToggle />
                   <a href="https://github.com/TranXuanDuc28" target="_blank" className="p-3 glass rounded-xl"><Github className="w-5 h-5" /></a>
                 </div>
-                <a 
-                  href="#contact" 
+                <a
+                  href="#contact"
                   onClick={() => setIsOpen(false)}
                   className="px-6 py-3 bg-primary text-white rounded-xl font-bold text-sm"
                 >
