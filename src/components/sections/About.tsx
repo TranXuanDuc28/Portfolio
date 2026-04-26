@@ -37,12 +37,22 @@ export default function About() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 glass rounded-3xl hover:bg-white/5 transition-all duration-500 group border-white/5 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5">
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="p-6 glass rounded-3xl hover:bg-white/5 transition-all duration-500 group border-white/5 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 flex flex-col h-full">
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                   <GraduationCap className="w-6 h-6" />
                 </div>
-                <h3 className="font-bold text-xl mb-2 text-foreground">Education</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">Software Engineering student at <span className="text-foreground/80">Information Technology Major</span>.</p>
+                <h3 className="font-bold text-xl mb-3 text-foreground">Education</h3>
+                
+                <div className="space-y-3 mt-auto">
+                  <div>
+                    <h4 className="text-sm font-bold text-foreground leading-snug">Vietnam-Korea University (VKU)</h4>
+                    <p className="text-xs text-muted-foreground mt-1">Software Engineering – Final Year</p>
+                  </div>
+                  <div className="flex flex-wrap gap-2 text-xs font-semibold">
+                    <span className="text-primary bg-primary/10 border border-primary/20 px-2 py-1 rounded-md">GPA: 3.32/4.0</span>
+                    <span className="text-muted-foreground border border-white/10 px-2 py-1 rounded-md">2022 - 2027</span>
+                  </div>
+                </div>
               </div>
 
               <div className="p-6 glass rounded-3xl hover:bg-white/5 transition-all duration-500 group border-white/5 hover:border-secondary/20 hover:shadow-xl hover:shadow-secondary/5">

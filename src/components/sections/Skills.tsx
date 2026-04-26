@@ -1,36 +1,50 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Layout, Server, Database, Settings, Terminal, Cpu, Globe, Shield } from "lucide-react";
+import { Layout, Server, Database, Terminal, Smartphone, Cloud } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "AI & Machine Learning",
-    icon: <Cpu className="w-8 h-8" />,
-    skills: ["LangChain", "PyTorch", "Mediapipe", "RAG", "Computer Vision"],
-    color: "from-orange-500 to-red-400",
-    shadow: "shadow-orange-500/20",
+    title: "Languages & Core",
+    icon: <Terminal className="w-8 h-8" />,
+    skills: ["JavaScript", "TypeScript", "Python", "Java", "PHP", "OOP"],
+    color: "from-yellow-500 to-orange-400",
+    shadow: "shadow-yellow-500/20",
   },
   {
     title: "Frontend",
     icon: <Layout className="w-8 h-8" />,
-    skills: ["React 19", "Next.js", "Tailwind 4", "Redux", "TypeScript"],
+    skills: ["React.js", "Next.js", "Redux", "SCSS", "Bootstrap", "Axios"],
     color: "from-blue-500 to-cyan-400",
     shadow: "shadow-blue-500/20",
   },
   {
     title: "Backend",
     icon: <Server className="w-8 h-8" />,
-    skills: ["Node.js", "NestJS", "Python", "Socket.io", "Cloudinary"],
+    skills: ["Node.js", "NestJS", "Express.js", "REST APIs", "JWT", "Socket.IO"],
     color: "from-emerald-500 to-teal-400",
     shadow: "shadow-emerald-500/20",
   },
   {
-    title: "Database & Others",
+    title: "Database",
     icon: <Database className="w-8 h-8" />,
-    skills: ["MySQL", "FAISS", "PostgreSQL", "Redis"],
+    skills: ["MySQL", "SQL Server", "Firebase", "Sequelize ORM"],
     color: "from-purple-500 to-pink-400",
     shadow: "shadow-purple-500/20",
+  },
+  {
+    title: "Mobile Dev",
+    icon: <Smartphone className="w-8 h-8" />,
+    skills: ["React Native", "Flutter", "Kotlin"],
+    color: "from-rose-500 to-red-400",
+    shadow: "shadow-rose-500/20",
+  },
+  {
+    title: "DevOps & Arch",
+    icon: <Cloud className="w-8 h-8" />,
+    skills: ["Docker", "Git/GitHub", "CI/CD", "Vercel", "Railway", "RAG", "MVC", "RBAC"],
+    color: "from-slate-500 to-gray-400",
+    shadow: "shadow-slate-500/20",
   },
 ];
 
@@ -61,7 +75,7 @@ export default function Skills() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={category.title}

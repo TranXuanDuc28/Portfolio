@@ -3,28 +3,59 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "@/components/ui/ProjectCard";
+import { Stethoscope, Activity, ShieldCheck } from "lucide-react";
 
 const projects = [
   {
-    title: "Medical Appointment System",
-    description: "A comprehensive healthcare platform featuring an intelligent medical assistant using LangChain RAG. Includes smart intent-based context selection, symptom-to-doctor matching, and automated medical history summarization.",
-    tech: ["LangChain", "Gemini AI", "FAISS", "NestJS", "React", "MySQL"],
+    title: "Website for scheduling medical appointments",
+    shortTitle: "MedCare System",
+    icon: <Stethoscope className="w-16 h-16" />,
+    role: "Fullstack Developer",
+    duration: "16/06/2025 - 18/08/2025",
+    description: [
+      "Full-stack Healthcare Platform: Supporting automated appointment booking, medical records, and digital payment integration (Casso Pay).",
+      "Security & Access Control: Implemented JWT-based authentication with hierarchical RBAC for Patients, Doctors, and Admins.",
+      "AI Integration: Leveraged RAG (LangChain) and PhoBERT for an intelligent chatbot and automated medical history summarization.",
+      "Real-time & Automation: Built management dashboards and live chat systems using Socket.io, featuring automated PDF prescription generation."
+    ],
+    tech: ["React.js", "Redux", "Node.js", "Express", "Flask", "JWT", "MySQL", "Sequelize ORM", "Socket.io", "LangChain", "FAISS"],
     github: "https://github.com/TranXuanDuc28/medical-appointment-system.git",
     demo: "#",
     category: "Fullstack",
   },
   {
-    title: "AI Fitness App",
-    description: "Advanced mobile application for real-time exercise form analysis using computer vision. Features automated repetition counting and posture assessment via custom-trained PoseRAC models.",
-    tech: ["React Native", "PyTorch", "Mediapipe", "PoseRAC", "Expo", "Socket.io"],
-    github: "https://github.com/TranXuanDuc28/ai-fitness-training-app.git",
+    title: "Developing AI applications for fitness training",
+    shortTitle: "AI Fitness App",
+    icon: <Activity className="w-16 h-16" />,
+    role: "Fullstack Developer",
+    duration: "30/09/2025 - 30/11/2025",
+    description: [
+      "Developed an AI-powered health platform generating personalized workout and nutrition plans based on user BMI, goals, and preferences.",
+      "Designed prompt engineering and backend logic to generate structured fitness plans using LLM APIs (OpenAI, Gemini).",
+      "Built a 24/7 virtual health assistant supporting real-time consultation via LLM integration.",
+      "Implemented AI pose detection using TensorFlow.js for real-time exercise feedback.",
+      "Developed calorie tracking and workout analytics with interactive data visualization."
+    ],
+    tech: ["React Native", "Expo", "Node.js", "Express", "MySQL", "Sequelize ORM", "Socket.io", "TensorFlow.js", "LLM APIs"],
+    github: "https://github.com/TranXuanDuc28/ai-fitness-training-app/tree/doan",
     demo: "#",
     category: "AI / Mobile",
   },
   {
-    title: "CIMUS - Law Enforcement Platform",
-    description: "Enterprise-grade criminal investigation management system. Features secure evidence handling with Cloudinary, complex RBAC, and advanced reporting workflows built with modern web technologies.",
-    tech: ["NestJS", "React 19", "Tailwind 4", "Cloudinary", "MySQL", "TypeScript"],
+    title: "Criminal Investigation Management System (CIMUS)",
+    shortTitle: "CIMUS Platform",
+    icon: <ShieldCheck className="w-16 h-16" />,
+    role: "Full-Stack Developer Intern (SERN)",
+    duration: "18/06/2025 - 17/07/2025",
+    description: [
+      "Built a web-based system for managing criminal cases, evidence tracking, and reporting.",
+      "Implemented JWT authentication and RBAC for secure access control.",
+      "Developed backend with NestJS + TypeORM (Query Builder, transactions) and RESTful APIs.",
+      "Built responsive frontend using React.js, Redux, Tailwind CSS, and Radix UI based on Figma design.",
+      "Integrated Cloudinary for file upload and media management.",
+      "Applied Agile/Scrum for iterative team development."
+    ],
+    tech: ["NestJS", "TypeORM", "React.js", "Redux", "Tailwind CSS", "MySQL", "Cloudinary", "JWT Auth", "RESTful API"],
     github: "#",
     demo: "#",
     category: "Fullstack",
