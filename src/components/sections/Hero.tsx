@@ -30,7 +30,7 @@ export default function Hero() {
             Available for new opportunities
           </motion.div>
 
-          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6 sm:mb-8 leading-[1.2] md:leading-[1.1]">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-7xl font-black tracking-tight mb-6 sm:mb-8 leading-[1.2] md:leading-[1.1]">
             Developing Fullstack <br className="hidden sm:block" />
             Web Applications <br />
             <span className="text-gradient">From Idea to Deployment</span>
@@ -82,10 +82,10 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-6"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-6 pointer-events-none"
       >
         <div className="flex flex-col items-center gap-2">
-          {/* <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-muted-foreground">Scroll</span> */}
+          <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-muted-foreground hidden sm:block">Scroll</span>
           <ChevronDown className="w-5 h-5 text-primary animate-bounce hidden sm:block lg:block" />
         </div>
       </motion.div>

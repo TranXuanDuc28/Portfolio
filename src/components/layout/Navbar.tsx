@@ -34,40 +34,45 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? "py-4" : "py-8"
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? "py-4 bg-background/80 backdrop-blur-xl border-b border-white/5 shadow-lg" : "py-6 bg-transparent"
         }`}
     >
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-50"
         style={{ scaleX }}
       />
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="text-2xl font-black tracking-tighter flex items-center gap-1 group"
-          suppressHydrationWarning
-        >
-          <div className="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition duration-500" />
-          <span className="relative text-2xl font-black tracking-tighter text-foreground">
-            TXD<span className="text-primary">.</span>
-          </span>
-        </motion.div>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-1 p-1 glass rounded-2xl" style={{ marginLeft: "130px" }}>
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="px-6 py-2 text-sm font-bold text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-xl transition-all"
-            >
-              {link.name}
-            </a>
-          ))}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        {/* Left: Logo */}
+        <div className="flex-1 flex justify-start">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="relative text-2xl font-black tracking-tighter flex items-center gap-1 group"
+            suppressHydrationWarning
+          >
+            <div className="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition duration-500 pointer-events-none" />
+            <span className="relative text-2xl font-black tracking-tighter text-foreground">
+              TXD<span className="text-primary">.</span>
+            </span>
+          </motion.div>
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        {/* Middle: Desktop Nav */}
+        <div className="hidden md:flex flex-1 justify-center">
+          <div className="flex items-center gap-1 p-1 glass rounded-2xl">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="px-5 py-2.5 rounded-xl text-sm font-bold transition-all text-muted-foreground hover:text-foreground hover:bg-white/5"
+              >  {link.name}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Right: Actions */}
+        <div className="hidden md:flex flex-1 justify-end items-center gap-4">
           <ThemeToggle />
           <a
             href="#contact"
@@ -78,7 +83,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden">
+        <div className="md:hidden flex-1 flex justify-end">
           <button
             onClick={() => setIsOpen(!isOpen)}
             suppressHydrationWarning
