@@ -55,7 +55,7 @@ export default function Navbar() {
         </motion.div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-1 p-1 glass rounded-2xl">
+        <div className="hidden md:flex items-center gap-1 p-1 glass rounded-2xl" style={{ marginLeft: "130px" }}>
           {navLinks.map((link) => (
             <a
               key={link.name}
